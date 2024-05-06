@@ -33,7 +33,6 @@ const updateSessionStatus = async (req, res) => {
 
         session.session = 'inactive';
 
-        // Save the changes to the database
         await session.save();
 
         return res.status(200).json({
